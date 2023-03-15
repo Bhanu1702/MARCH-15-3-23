@@ -4,7 +4,14 @@ jobs:
   Build-job:
     name: Create .NET Project
     runs-on: ubuntu-latest
-    container: mcr.microsoft.com/dotnet/sdk:6.0
+    container: mcr.microsoft.com/dotnet/sdk:7.0
     steps:
       - run: dotnet --version
         name: Chech .NET Version
+      - uses: actions/checkout@v3
+        name: Checkout the code
+      - run: |
+          dotnet publish
+          --configuration Release
+          --output out
+        name: Publish .NET Web Application
