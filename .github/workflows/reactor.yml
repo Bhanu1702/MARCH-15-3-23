@@ -15,4 +15,3 @@ jobs:
           --configuration Release \
           --output out
         name: Publish .NET Web Application
-        
