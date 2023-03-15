@@ -1,2 +1,6 @@
 on: push
 name: Reactor done
+jobs:
+  Build-job:
+    name: Create .NET Project
+    runs-on: ubuntu-latest
