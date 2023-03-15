@@ -7,11 +7,11 @@ jobs:
     container: mcr.microsoft.com/dotnet/sdk:7.0
     steps:
       - run: dotnet --version
-        name: Chech .NET Version
+        name: Check .NET Version
       - uses: actions/checkout@v3
-        name: Checkout the code
+        name: Checkout code
       - run: |
-          dotnet publish
-          --configuration Release
+          dotnet publish\
+          --configuration Release\
           --output out
         name: Publish .NET Web Application
