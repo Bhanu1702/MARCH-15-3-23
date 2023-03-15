@@ -4,3 +4,6 @@ jobs:
   Build-job:
     name: Create .NET Project
     runs-on: ubuntu-latest
+    steps:
+      - run: dotnet --version
+        name: Chech .NET Version
